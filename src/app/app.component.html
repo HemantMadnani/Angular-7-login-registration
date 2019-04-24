@@ -1,0 +1,18 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<!-- <app-sidebar></app-sidebar> -->
+<h1 style="text-align: center"> Apexx Portal</h1>
+  <app-nav *ngIf = 'currentUser'></app-nav>
+  
+  <div class="jumbotron">
+      <div class="container">
+          <div class="row">
+              <div class="col-sm-6 offset-sm-3">
+                 
+                  <alert></alert>
+                  <router-outlet></router-outlet>
+              </div>
+          </div>
+      </div>
+  </div>
+              
+           

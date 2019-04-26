@@ -1,3 +1,30 @@
-<p>
-  transactions works!
-</p>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">   
+   <thead>
+      <tr>
+        <th>Id</th>
+        <th>Organisation</th>
+        <th>RequestDate</th>
+        <th>ResponseDate</th>
+        <th>Country</th>
+        <th>Zipcode</th>
+        <th>status</th>
+      </tr>
+    </thead>
+<tbody *ngIf="transactions?.length != 0">
+    <tr *ngFor="let data of transactions">
+      <td>{{data.id}}</td>
+      <td>{{data.organisationName}}</td>
+      <td>{{data.requestDate | date: "dd/MM/yyyy HH:mm:ss"}}</td>
+      <td>{{data.responseDate | date: "dd/MM/yyyy HH:mm:ss"}}</td>
+      <td>{{data.country}}</td>
+      <td>{{data.zipcode}}</td>
+      <td>{{data.status}}</td>
+      </tr>
+</tbody>
+<tbody *ngIf="transactions?.length == 0">
+    <tr>
+      <td colspan="3" class="no-data-available">No data!</td>
+    </tr>
+  <tbody>
+  </table>

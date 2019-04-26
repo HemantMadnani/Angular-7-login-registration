@@ -20,7 +20,7 @@ import { FakeBackendInterceptor } from './backends/fake-backend';
 import { AlertComponent } from './comp/alert.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { TransactionsComponent } from './transactions/transactions.component';
-
+import { DataTablesModule } from 'angular-datatables';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +33,7 @@ import { TransactionsComponent } from './transactions/transactions.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, ReactiveFormsModule, HttpClientModule, AppRoutingModule
+    AppRoutingModule, ReactiveFormsModule, HttpClientModule, AppRoutingModule, DataTablesModule
   ],
   exports: [RegistrationComponent],
   providers: [LoginService, User, AlertService, UserService,  { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

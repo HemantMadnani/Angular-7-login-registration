@@ -54,7 +54,8 @@ onSubmit() {
     .pipe(first())
     .subscribe(
         data => {
-         this.router.navigate([this.returnUrl]);
+        console.log(data);
+        this.router.navigate([this.returnUrl]);
         },
         error => {
             console.log('error===', error);

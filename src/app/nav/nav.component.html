@@ -15,7 +15,17 @@
       <li class="nav-item">
         <a class="nav-link" routerLink="/contact">Contact</a>
       </li>
-    
+	  
+	  
+	   <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" routerLink="#">Transactions<span class="caret"></span></a>
+		<ul class="dropdown-menu custom-dropdown-menu">
+      <li><a class="nav-link" routerLink="#" (click)="fetchCapture()" >Capture</a></li>
+      <li><a class="nav-link" routerLink="#" (click)="fetchCancel()">Cancel</a></li>
+      <li><a  class="nav-link" routerLink="#" (click)="fetchRefund()">Refund</a></li> 
+		</ul>
+      </li>
+   
         <li class="nav-item" *ngIf = "currentUser; else pleaseLogin">
           <a class="nav-link" routerLink="/logout" (click)="logout()">{{logoutv}}</a>
         </li>

@@ -6,6 +6,7 @@ import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { AuthGuard } from './security/auth.guards';
+import { TransactionsComponent } from './transactions/transactions.component';
 
 const routes: Routes = [{
   path: '', component: HomeComponent, canActivate: [AuthGuard]
@@ -13,11 +14,14 @@ const routes: Routes = [{
 { path: 'about', component: AboutComponent }, {
   path: 'contact', component: ContactComponent
 }, {
-path: 'login', component: LoginComponent
+  path: 'login', component: LoginComponent
 }, {
-path: 'register', component: RegistrationComponent
+  path: 'register', component: RegistrationComponent
 }, {
-path: '**', redirectTo: ''
+  path: 'transactions', component: TransactionsComponent
+},
+{
+  path: '**', redirectTo: ''
 }];
 
 @NgModule({
